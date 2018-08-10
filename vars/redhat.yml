@@ -1,5 +1,5 @@
 ---
-netbox_packages:
+__netbox_packages:
   - gcc
   - postgresql-devel
   - libxml2-devel
@@ -8,13 +8,13 @@ netbox_packages:
   - libjpeg-devel
   - graphviz
   - openssl-devel
-netbox_python_packages:
+__netbox_python_packages:
   - python34
   - python34-devel
   - python34-setuptools
   - python34-pip
   - python-psycopg2
-netbox_python_binary: /usr/bin/python3.4
-netbox_pip_binary: /usr/bin/pip3
-netbox_ldap_packages:
+__netbox_python_binary: /usr/bin/python3.4
+__netbox_pip_binary: /usr/bin/pip3
+__netbox_ldap_packages:
   - openldap-devel

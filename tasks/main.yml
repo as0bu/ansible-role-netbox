@@ -2,13 +2,7 @@
 # tasks file for lae.netbox
 - import_tasks: validate_variables.yml
 
-- name: Gather OS specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution|lower }}-{{ ansible_distribution_version }}.yml"
-    - "{{ ansible_distribution|lower }}-{{ ansible_distribution_major_version }}.yml"
-    - "{{ ansible_distribution|lower }}.yml"
-    - "{{ ansible_os_family|lower }}.yml"
+- import_tasks: variables.yml
 
 - include_tasks: "install_packages_{{ ansible_pkg_mgr }}.yml"
 
